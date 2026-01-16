@@ -1,62 +1,61 @@
-# Chat App Clone - Angular 17
+# Clon de Chat App - Angular 17
 ### Trabajo Final Integrador - UTN BA
-![Status](https://img.shields.io/badge/Status-Completed-success) ![Angular](https://img.shields.io/badge/Angular-17%2B-DD0031?logo=angular)
+![Status](https://img.shields.io/badge/Status-Completado-success) ![Angular](https://img.shields.io/badge/Angular-17%2B-DD0031?logo=angular)
 
-## Project Description
-This application is a responsive chat interface developed as the Final Integrated Project for the "Desarrollo en Angular" course. It allows users to view contact lists, filter chats in real-time, and exchange messages with an automated bot response system. The project strictly adheres to the latest Angular 17 standards, utilizing Standalone Components and Signals.
+## Descripción del Proyecto
+Esta aplicación es una interfaz de chat responsiva desarrollada como Trabajo Final Integrador para el curso "Desarrollo en Angular". Permite a los usuarios ver listas de contactos, filtrar chats en tiempo real e intercambiar mensajes con un sistema automatizado de respuestas de bot. El proyecto sigue estrictamente los estándares más recientes de Angular 17, utilizando Componentes Standalone y Signals.
 
-## Tech Stack
-The project is built using the following technologies and architectural patterns:
+## Stack Tecnológico
+El proyecto está construido usando las siguientes tecnologías y patrones arquitectónicos:
 
 - **Framework:** Angular 17+
-- **Architecture:** Standalone Components (No NgModules)
-- **State Management:** Angular Signals (`signal`, `computed`)
-- **Forms:** Reactive Forms (`FormControl`, `Validators`)
-- **Styling:** Native CSS (Flexbox/Grid), Responsive Design (Mobile/Desktop), No external UI libraries
-- **Routing:** Angular Router (Lazy Loading)
+- **Arquitectura:** Componentes Standalone (Sin NgModules)
+- **Gestión de Estado:** Angular Signals (`signal`, `computed`)
+- **Formularios:** Reactive Forms (`FormControl`, `Validators`)
+- **Estilos:** CSS Nativo (Flexbox/Grid), Diseño Responsivo (Mobile/Desktop), Sin librerías UI externas
+- **Enrutamiento:** Angular Router (Lazy Loading)
 
-## Key Features
-- [x] **Responsive Layout:** Adaptive 2-column view for Desktop and 1-column view for Mobile.
-- [x] **Routing:** Implementation of routes for `/chats` (list), `/chats/:id` (detail), and `/nuevo` (new chat).
-- [x] **Real-time Filter:** Efficient contact searching using Angular Signals.
-- [x] **Smart UI:** Visual distinction between sent (right-aligned) and received (left-aligned) messages.
-- [x] **Bot Simulation:** Auto-reply logic using `setTimeout` and RxJS to simulate network delay and bot responses.
+## Características Principales
+- [x] **Diseño Responsivo:** Vista adaptativa de 2 columnas en Desktop y 1 columna en Mobile.
+- [x] **Enrutamiento:** Implementación de rutas para `/chats` (lista), `/chats/:id` (detalle) y `/nuevo` (nuevo chat).
+- [x] **Filtro en Tiempo Real:** Búsqueda eficiente de contactos usando Angular Signals.
+- [x] **Interfaz Inteligente:** Distinción visual entre mensajes enviados (alineados a la derecha) y recibidos (alineados a la izquierda).
 
-## Installation & Usage
-To run the project locally, follow these steps:
+## Instalación y Uso
+Para ejecutar el proyecto localmente, seguí estos pasos:
 
-1. **Install dependencies:**
+1. **Instalá las dependencias:**
    ```bash
    npm install
    ```
 
-2. **Start the development server:**
+2. **Iniciá el servidor de desarrollo:**
    ```bash
-   ng serve
+   npm run start
    ```
 
-3. **Access the application:**
-   Open your browser and navigate to `http://localhost:4200`
+3. **Accedé a la aplicación:**
+   Abrí tu navegador y navegá a `http://localhost:4200`
 
-## Project Structure
-The `src/app` directory is organized to ensure separation of concerns between feature components, layouts, and core services:
+## Estructura del Proyecto
+El directorio `src/app` está organizado para asegurar separación de responsabilidades entre componentes de características, layouts y servicios principales:
 
 ```text
 src/
 └── app/
-    ├── chats-component/       # Feature: Chat list and filtering
-    ├── chats-detail-component/# Feature: Individual conversation view
-    ├── empty-chat/            # Shared: Placeholder state for no selection
-    ├── main-layout/           # Core: Main application layout wrapper
-    ├── new-chat-component/    # Feature: Form to start a new chat
-    ├── services/              # Core: Data management using Signals
-    ├── app.config.ts          # Application configuration
-    └── app.routes.ts          # Routing definitions
+    ├── chats-component/       # Característica: Lista de chats y filtrado
+    ├── chats-detail-component/# Característica: Vista de conversación individual
+    ├── empty-chat/            # Compartido: Estado de marcador de posición sin selección
+    ├── main-layout/           # Principal: Envoltorio de layout de la aplicación
+    ├── new-chat-component/    # Característica: Formulario para iniciar un nuevo chat
+    ├── services/              # Principal: Gestión de datos usando Signals
+    ├── app.config.ts          # Configuración de la aplicación
+    └── app.routes.ts          # Definiciones de enrutamiento
 ```
 
-## Deploy
-The application is deployed and can be viewed live at:
-**Deployed on Vercel/Netlify:** [web-chat-angular.vercel.app](https://web-chat-angular.vercel.app)
+## Despliegue
+La aplicación está desplegada y puede verse en vivo en:
+**Desplegada en Vercel/Netlify:** [web-chat-angular.vercel.app](https://web-chat-angular.vercel.app)
 
 ---
-*Developed by Damian Canton for UTN BA.*
+*Desarrollado por Damian Canton para UTN BA.*
