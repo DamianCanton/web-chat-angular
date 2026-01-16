@@ -1,0 +1,13 @@
+/* App Container Component Styles */
+
+/* Full Screen Layout - No floating box */
+.app-container {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: var(--app-background);
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}

@@ -1,1 +1,79 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global Design System - WhatsApp Dark Mode Theme */
+:root {
+  /* Color Palette */
+  --app-background: #111b21; /* Deep dark background */
+  --panel-header: #202c33; /* Headers */
+  --panel-background: #111b21; /* Sidebar/List background */
+  --chat-background: #0b141a; /* Chat area background */
+
+  --incoming-background: #202c33; /* Received message */
+  --outgoing-background: #005c4b; /* Sent message */
+
+  --primary-text: #e9edef; /* Main text color - almost white */
+  --secondary-text: #8696a0; /* Subtitles, time, etc - grey */
+  --highlight: #00a884; /* WhatsApp Green Accent */
+  --danger: #ef5350; /* Error/Delete */
+
+  --input-background: #2a3942;
+  --border-color: #222d34; /* Separators */
+
+  --hover-color: #202c33;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Global Reset & Typography */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent global scroll */
+}
+
+/* Ensure Angular Root takes full space */
+app-root,
+.app-container {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: var(--app-background);
+  color: var(--primary-text);
+  height: 100dvh; /* Mobile viewport fix */
+  width: 100%;
+  overflow: hidden;
+  font-size: 14.5px;
+  line-height: 1.5;
+}
+
+/* Custom Scrollbar for Dark Mode */
+::-webkit-scrollbar {
+  width: 6px !important;
+  height: 6px !important;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(134, 150, 160, 0.3); /* secondary-text styled */
+  border-radius: 3px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Common Utility Classes */
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}

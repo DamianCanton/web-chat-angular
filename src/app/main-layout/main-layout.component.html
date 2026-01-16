@@ -1,0 +1,8 @@
+<div class="main-layout">
+  <aside class="left-panel" [class.mobile-hidden]="isChatSelected">
+    <app-chats-component></app-chats-component>
+  </aside>
+  <main class="right-panel" [class.mobile-visible]="isChatSelected">
+    <router-outlet></router-outlet>
+  </main>
+</div>

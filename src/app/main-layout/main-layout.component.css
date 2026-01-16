@@ -1,0 +1,64 @@
+:host {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.main-layout {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.left-panel {
+  width: 100%; /* Default mobile first */
+  height: 100%;
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--border-color);
+  background-color: var(--panel-background);
+}
+
+.right-panel {
+  display: none; /* Hidden on mobile by default */
+  flex: 1;
+  height: 100%;
+  background-color: var(--chat-background);
+  /* Add subtle pattern if we wanted */
+  background-image: linear-gradient(rgba(11, 20, 26, 0.95), rgba(11, 20, 26, 0.95)),
+    url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');
+  background-repeat: repeat;
+  background-size: 500px;
+}
+
+/* Tablet/Desktop Styles - Standard split view */
+@media (min-width: 900px) {
+  .left-panel {
+    width: 30%;
+    min-width: 320px;
+    max-width: 450px;
+    display: flex !important; /* Always show on desktop */
+  }
+
+  .right-panel {
+    display: block !important; /* Always show on desktop */
+  }
+}
+
+/* Mobile Logic - driven by classes */
+@media (max-width: 899px) {
+  .left-panel.mobile-hidden {
+    display: none;
+  }
+
+  .right-panel {
+    display: none; /* Hidden by default on mobile unless visible class adds it */
+  }
+
+  .right-panel.mobile-visible {
+    display: block;
+  }
+}

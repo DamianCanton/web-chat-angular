@@ -18,6 +18,6 @@ export class ChatsComponent {
   }
 
   nuevo() {
-    this.router.navigate(['/nuevo']);
+    this.router.navigate(['/chats', 'new']);
   }
 }

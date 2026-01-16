@@ -1,24 +1,36 @@
 @if (chatSignal()) {
-    <header>
-        <h2>{{ chatSignal()?.name }}</h2>
-        <span>{{ chatSignal()?.messageslist?.length }} mensajes</span>
-    </header>
-
-    <div>
-        @for (message of chatSignal()?.messageslist ?? []; track message.id) {
-            <div>
-                <p>{{ message.text }}</p>
-                <div>{{ formatDate(message.date) }}</div>
+    <div class="chat-window">
+        <header class="chat-header">
+            <button class="back-btn" (click)="goBack()">
+                &#8592; <!-- Left Arrow HTML Entity -->
+            </button>
+            <div class="avatar-small">
+                 <img src="https://ui-avatars.com/api/?name={{chatSignal()?.name}}&background=random" alt="{{chatSignal()?.name}}">
             </div>
-        } @empty {
-            <p>No hay mensajes en este chat.</p>
-        }
+            <div class="header-info">
+                <h2>{{ chatSignal()?.name }}</h2>
+                <span>{{ chatSignal()?.messageslist?.length }} mensajes</span>
+            </div>
+        </header>
+    
+        <div class="message-area">
+            @for (message of chatSignal()?.messageslist ?? []; track message.id) {
+                <div class="message-bubble" [class.msg-sent]="message.fromME" [class.msg-received]="!message.fromME">
+                    <p class="message-text">{{ message.text }}</p>
+                    <div class="message-time">{{ formatDate(message.date) }}</div>
+                </div>
+            } @empty {
+                <p class="no-messages">No hay mensajes en este chat.</p>
+            }
+        </div>
+    
+        <form (ngSubmit)="send()" class="chat-input-area">
+            <input [(ngModel)]="newText" name="Text" placeholder="Escribe un mensaje" required class="message-input" />
+            <button type="submit" class="send-btn">Enviar</button>
+        </form>
     </div>
-
-    <form (ngSubmit)="send()">
-        <input [(ngModel)]="newText" name="Text" placeholder="Escribe un mensaje" required />
-        <button type="submit">Enviar</button>
-    </form>
 } @else {
-    <h2>Chat no encontrado</h2>
+    <div class="chat-placeholder">
+        <h2>Chat no encontrado</h2>
+    </div>
 }

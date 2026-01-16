@@ -1,17 +1,22 @@
-<section>
-    <header>
+<section class="sidebar">
+    <header class="sidebar-header">
         <h2>Chats</h2>
-        <button (click)="nuevo()">Nuevo Chat</button>
+        <button (click)="nuevo()" class="new-chat-btn">Nuevo Chat</button>
     </header>
-    <ul>
+    <ul class="chat-list">
         @for (chat of chatService.chats(); track chat.id) {
-        <li (click)="open(chat.id)">
-            <div>{{ chat.name }}</div>
-            <p>{{ chat.lastmessage }}</p>
+        <li (click)="open(chat.id)" class="chat-item">
+            <div class="avatar">
+                <img src="https://ui-avatars.com/api/?name={{chat.name}}&background=random" alt="{{chat.name}}">
+            </div>
+            <div class="chat-info">
+                <div class="chat-name">{{ chat.name }}</div>
+                <p class="last-message">{{ chat.lastmessage }}</p>
+            </div>
         </li>
         }
         @empty {
-        <li>No hay chats</li>
+        <li class="empty-chat">No hay chats</li>
         }
     </ul>
 </section>

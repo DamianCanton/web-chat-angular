@@ -1,0 +1,161 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: var(--panel-background);
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.new-chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Header Styles to match sidebar */
+.header {
+  display: flex;
+  align-items: center;
+  height: 108px; /* Taller header for new chat usually, or standard 60px */
+  min-height: 108px;
+  padding: 0 20px;
+  background-color: var(--panel-header);
+  color: var(--primary-text);
+  border-bottom: 1px solid var(--border-color);
+  transition: height 0.3s;
+}
+
+@media (min-width: 900px) {
+  .header {
+    height: 60px;
+    min-height: 60px;
+  }
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.header h2 {
+  font-size: 19px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: var(--primary-text);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.back-btn:hover {
+  background-color: var(--hover-color);
+}
+
+/* Form Styles */
+.chat-form {
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.form-group {
+  position: relative;
+  margin-top: 10px;
+}
+
+.form-group input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--secondary-text);
+  color: var(--primary-text);
+  padding: 8px 0;
+  font-size: 17px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  border-bottom-color: var(--highlight);
+}
+
+.form-group label {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  color: var(--secondary-text);
+  pointer-events: none;
+  transition: 0.2s ease all;
+  font-size: 17px;
+}
+
+/* Floating Label Logic */
+.form-group input:focus ~ label,
+.form-group input:not(:placeholder-shown) ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: var(--highlight);
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  justify-content: flex-end; /* Floating action button style or right aligned */
+  margin-top: 20px;
+}
+
+.submit-btn {
+  background-color: var(--highlight); /* WhatsApp Green */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, background-color 0.2s, opacity 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #00c298; /* Lighter green */
+  transform: scale(1.05);
+}
+
+.submit-btn:active {
+  transform: scale(0.95);
+}
+
+.submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: var(--secondary-text);
+}
