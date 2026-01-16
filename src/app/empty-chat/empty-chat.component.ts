@@ -6,14 +6,7 @@ import { Component } from '@angular/core';
   template: `
     <div class="empty-state">
       <div class="empty-content">
-        <h1 class="welcome-title">Web Chat</h1>
-        <p class="empty-text">
-          Envía y recibe mensajes sin necesidad de mantener tu teléfono conectado.<br />
-          Usa Web Chat en hasta 4 dispositivos vinculados y 1 teléfono a la vez.
-        </p>
-        <div class="encrypted-note">
-          🔒 Tus mensajes personales están cifrados de extremo a extremo.
-        </div>
+        <h1 class="welcome-title">Web Chat!</h1>
       </div>
     </div>
   `,
