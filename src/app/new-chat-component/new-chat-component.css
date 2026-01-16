@@ -24,11 +24,11 @@
   height: 100%;
 }
 
-/* Header Styles to match sidebar */
+
 .header {
   display: flex;
   align-items: center;
-  height: 108px; /* Taller header for new chat usually, or standard 60px */
+  height: 108px; 
   min-height: 108px;
   padding: 0 20px;
   background-color: var(--panel-header);
@@ -74,7 +74,7 @@
   background-color: var(--hover-color);
 }
 
-/* Form Styles */
+
 .chat-form {
   padding: 20px 30px;
   display: flex;
@@ -115,7 +115,7 @@
   font-size: 17px;
 }
 
-/* Floating Label Logic */
+
 .form-group input:focus ~ label,
 .form-group input:not(:placeholder-shown) ~ label {
   top: -20px;
@@ -123,15 +123,15 @@
   color: var(--highlight);
 }
 
-/* Actions */
+
 .actions {
   display: flex;
-  justify-content: flex-end; /* Floating action button style or right aligned */
+  justify-content: flex-end; 
   margin-top: 20px;
 }
 
 .submit-btn {
-  background-color: var(--highlight); /* WhatsApp Green */
+  background-color: var(--highlight); 
   color: white;
   border: none;
   border-radius: 50%;
@@ -146,7 +146,7 @@
 }
 
 .submit-btn:hover {
-  background-color: #00c298; /* Lighter green */
+  background-color: #00c298; 
   transform: scale(1.05);
 }
 

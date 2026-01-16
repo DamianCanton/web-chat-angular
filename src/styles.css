@@ -1,27 +1,24 @@
-/* Global Design System - WhatsApp Dark Mode Theme */
 :root {
-  /* Color Palette */
-  --app-background: #111b21; /* Deep dark background */
-  --panel-header: #202c33; /* Headers */
-  --panel-background: #111b21; /* Sidebar/List background */
-  --chat-background: #0b141a; /* Chat area background */
+  --app-background: #111b21;
+  --panel-header: #202c33;
+  --panel-background: #111b21;
+  --chat-background: #0b141a;
 
-  --incoming-background: #202c33; /* Received message */
-  --outgoing-background: #005c4b; /* Sent message */
+  --incoming-background: #202c33;
+  --outgoing-background: #005c4b;
 
-  --primary-text: #e9edef; /* Main text color - almost white */
-  --secondary-text: #8696a0; /* Subtitles, time, etc - grey */
-  --highlight: #00a884; /* WhatsApp Green Accent */
-  --danger: #ef5350; /* Error/Delete */
+  --primary-text: #e9edef;
+  --secondary-text: #8696a0;
+  --highlight: #00a884;
+  --danger: #ef5350;
 
   --input-background: #2a3942;
-  --border-color: #222d34; /* Separators */
+  --border-color: #222d34;
 
   --hover-color: #202c33;
   --shadow-color: rgba(0, 0, 0, 0.2);
 }
 
-/* Global Reset & Typography */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -37,10 +34,9 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden; /* Prevent global scroll */
+  overflow: hidden;
 }
 
-/* Ensure Angular Root takes full space */
 app-root,
 .app-container {
   display: block;
@@ -51,27 +47,27 @@ app-root,
 body {
   background-color: var(--app-background);
   color: var(--primary-text);
-  height: 100dvh; /* Mobile viewport fix */
+  height: 100dvh;
   width: 100%;
   overflow: hidden;
   font-size: 14.5px;
   line-height: 1.5;
 }
 
-/* Custom Scrollbar for Dark Mode */
 ::-webkit-scrollbar {
   width: 6px !important;
   height: 6px !important;
 }
+
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(134, 150, 160, 0.3); /* secondary-text styled */
+  background-color: rgba(134, 150, 160, 0.3);
   border-radius: 3px;
 }
+
 ::-webkit-scrollbar-track {
   background: transparent;
 }
 
-/* Common Utility Classes */
 .icon {
   width: 24px;
   height: 24px;

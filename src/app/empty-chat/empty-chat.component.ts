@@ -25,7 +25,7 @@ import { Component } from '@angular/core';
         align-items: center;
         justify-content: center;
         background-color: var(--panel-background);
-        border-bottom: 6px solid #00a884; /* Accent strip at bottom like WA */
+        border-bottom: 6px solid #00a884;
         flex-direction: column;
         text-align: center;
         padding: 0 40px;

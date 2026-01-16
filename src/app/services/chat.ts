@@ -61,7 +61,7 @@ export class ChatService  {
           },
           {
             id: '3',
-            text: 'nos vemos mañana',
+            text: 'Chau',
             fromME: false,
             date: now,
           }

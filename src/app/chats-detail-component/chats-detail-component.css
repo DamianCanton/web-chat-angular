@@ -9,7 +9,7 @@
   flex-direction: column;
   height: 100%;
   background-color: var(--chat-background);
-  /* Pattern overlay can be handled with CSS gradient or image with opacity */
+  
   background-image: linear-gradient(rgba(11, 20, 26, 0.95), rgba(11, 20, 26, 0.95)),
     url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');
   background-repeat: repeat;
@@ -93,7 +93,7 @@
   color: var(--secondary-text);
 }
 
-/* Message Area */
+
 .message-area {
   flex: 1;
   overflow-y: auto;
@@ -103,7 +103,7 @@
   gap: 10px;
 }
 
-/* Message Bubbles */
+
 .message-bubble {
   max-width: 65%;
   padding: 6px 7px 8px 9px;
@@ -114,19 +114,19 @@
   line-height: 19px;
   color: var(--primary-text);
   display: flex;
-  flex-wrap: wrap; /* Allows time to wrap if text is long */
-  column-gap: 8px; /* Space between text and time */
-  align-items: flex-end; /* Align bottom */
+  flex-wrap: wrap; 
+  column-gap: 8px; 
+  align-items: flex-end; 
 }
 
-/* Sent Messages (User) */
+
 .msg-sent {
   align-self: flex-end;
   background-color: var(--outgoing-background);
   border-top-right-radius: 0;
 }
 
-/* Received Messages (Others) */
+
 .msg-received {
   align-self: flex-start;
   background-color: var(--incoming-background);
@@ -141,8 +141,8 @@
 .message-time {
   font-size: 11px;
   color: rgba(255, 255, 255, 0.6);
-  margin-left: auto; /* Pushes time to the right */
-  margin-bottom: -3px; /* Visual adjustment */
+  margin-left: auto; 
+  margin-bottom: -3px;
   height: 14px;
   line-height: 14px;
 }
@@ -159,7 +159,7 @@
   box-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.13);
 }
 
-/* Input Area */
+
 .chat-input-area {
   display: flex;
   align-items: center;
