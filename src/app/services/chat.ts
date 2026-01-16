@@ -1,22 +1,21 @@
 import { computed, Injectable, Signal, signal, WritableSignal} from '@angular/core';
 import { Chat } from '../../interfaces/chat';
-import { Message } from '../../interfaces/messege';
-
+import { Message } from '../../interfaces/message';
 
 
 @Injectable({
   providedIn: 'root',
 })
 export class ChatService  {
-  //mook de chats guqardados en un signal
-  private _chats: WritableSignal<Chat[]> = signal<Chat[]>(this.createMook())
+  //mock de chats guardados en un signal
+  private _chats: WritableSignal<Chat[]> = signal<Chat[]>(this.createMock())
   // buena practica por que solo se puede modificar desde los metodos pero los mostramos como solo lectura
   public readonly chats: Signal<Chat[]> = this._chats.asReadonly()
 
   constructor() {}
-  // mook de chats default
-  private createMook () : Chat [] {
-    const now = new Date().toISOString
+  // mock de chats default
+  private createMock () : Chat [] {
+    const now = new Date().toISOString()
     return [
       {
         id: '1',
@@ -27,19 +26,19 @@ export class ChatService  {
             id: '1',
             text: 'hola, como estas?',
             fromME: false,
-            date: now(),
+            date: now,
           },
           {
             id: '2',
             text: 'bien y tu?',
             fromME: true,
-            date: now(),
+            date: now,
           },
           {
             id: '3',
             text: 'de perlas!',
             fromME: false,
-            date: now(),
+            date: now,
           }
         ],
       },
@@ -52,19 +51,19 @@ export class ChatService  {
             id: '1',
             text: 'hola juan!',
             fromME: true,
-            date: now(),
+            date: now,
           },
           {
             id: '2',
             text: 'nos vemos mañana',
             fromME: false,
-            date: now(),
+            date: now,
           },
           {
             id: '3',
             text: 'nos vemos mañana',
             fromME: false,
-            date: now(),
+            date: now,
           }
         ],
       },
@@ -77,13 +76,13 @@ export class ChatService  {
             id: '1',
             text: 'hola maria!',
             fromME: true,
-            date: now(),
+            date: now,
           },
           {
             id: '2',
             text: 'te llamo en un rato',
             fromME: false,
-            date: now(),
+            date: now,
           }
         ],
       },
@@ -128,7 +127,7 @@ export class ChatService  {
         const updateMessages = [...chat.messageslist, newMessage]
         return {
           ...chat,
-          messages: updateMessages,
+          messageslist: updateMessages,
           lastmessage: text,
         }
       });

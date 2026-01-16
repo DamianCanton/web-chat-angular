@@ -7,7 +7,7 @@
         @for (chat of chatService.chats(); track chat.id) {
         <li (click)="open(chat.id)">
             <div>{{ chat.name }}</div>
-            <p>{{ chat.lastMessage }}</p>
+            <p>{{ chat.lastmessage }}</p>
         </li>
         }
         @empty {

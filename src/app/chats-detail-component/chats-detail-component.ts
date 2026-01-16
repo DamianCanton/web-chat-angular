@@ -32,9 +32,11 @@ export class ChatsDetailComponent {
   }
 
   send(){
-    if (this.id || !this.newText.trim()) {
+    if (!this.id || !this.newText.trim()) {
       return;
     }
+    this.chatService.sendMessage(this.id, this.newText, true);
+    this.newText = '';
   }
   //hacer idealmete como un pipe
   formatDate(date: string) {
